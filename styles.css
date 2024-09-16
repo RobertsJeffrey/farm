@@ -20,10 +20,6 @@ header p {
     font-style: italic;
 }
 
-nav {
-    width: 275px;
-}
-
 nav a {
     text-decoration: none;
     color: #ffffff;
@@ -31,17 +27,17 @@ nav a {
 }
 
 h1 {
-    font-family: Irish Grover;
+    font-family: 'Irish Grover';
     font-size: 2.5em;
 }
 
 h2 {
-    font-family: Irish Grover;
+    font-family: 'Irish Grover';
     font-size: 1.75em;
 }
 
 h3 {
-    font-family: Irish Grover;
+    font-family: 'Irish Grover';
     font-size: 1.25em;
     text-align: center;
 }
@@ -80,15 +76,10 @@ P {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
     text-align: center;
     width: 200px;
-}
-
-small {
-    background-color: #ffffff;
-    text-align: center;
 }
 
 footer {
@@ -97,8 +88,12 @@ footer {
     text-align: center;
 }
 
-small {
+#copyright {
+    background-color: #ffffff;
     color: #06A816;
+    font-family: Habibi;
+    font-size: 1.25em;
+    text-align: center;
 }
 
 /* --------GLOBAL STYLES (mobile first/small) ----------*/
@@ -122,12 +117,37 @@ small {
         text-align: center;
     }
 
+    Nav {
+        background-color: #ffffff;
+    }
+
+    nav a {
+        display: inline-block;
+        width: 200px;
+        margin: 10px;
+        padding: 15px 25px;
+        border: 2px solid #ffffff;
+        border-radius: 5px;
+        background-color: #E75D02;
+        border-radius: 5px;
+    }
+
+    ul {
+        padding: 10px;
+    }
+
+    li {
+        display: block;
+        text-align: center;
+    }
+
     main h2 {
         padding-left: 10px;
     }
 
     main p {
         padding-left: 15px;
+        padding-right: 15px;
     }
 
     footer {
@@ -139,6 +159,7 @@ small {
 
 /*--------------- MEDIA QUERY (medium) --------------*/
 @media screen and (min-width: 834px) and (max-width: 1279px) {
+
     .fruitList {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -162,22 +183,39 @@ small {
         padding-right: 25px;
     }
 
-    nav ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
+    nav a {
+        display: inline-block;
+        width: 200px;
+        margin: auto;
+        padding: 15px 25px;
+        border: 2px solid #ffffff;
+        border-radius: 5px;
+        background-color: #E75D02;
+        border-radius: 5px;
     }
 
-    nav ul li {
-        margin: 0 50px;
+    ul {
+        padding: 10px;
+        text-align: center;
+        background-color: #ffffff;
     }
+
+    li {
+        display: inline;
+        text-align: center;
+        margin: 100px;
+    }
+
+
 
     main h2 {
         padding-left: 10px;
     }
 
+
     main p {
         padding-left: 15px;
+        padding-right: 15px;
     }
 
     footer {
@@ -205,6 +243,31 @@ small {
 
 /*--------------- MEDIA QUERY (large) ---------------*/
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .heading {
+        grid-column: 1;
+    }
+
+    header nav {
+        grid-column: 2;
+    }
+
+    nav a {
+        display: inline-block;
+        float: right;
+        width: 200px;
+        margin: 10px;
+        padding: 15px 25px;
+        border: 2px solid #ffffff;
+        border-radius: 5px;
+        background-color: #E75D02;
+        border-radius: 5px;
+    }
+
     .fruitList {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -225,7 +288,7 @@ small {
         padding-left: 10px;
     }
 
-    ul {
+    li {
         display: inline;
     }
 
@@ -235,6 +298,7 @@ small {
 
     main p {
         padding-left: 15px;
+        padding-right: 15px;
     }
 
     footer {
@@ -264,6 +328,31 @@ small {
 /*--------------- MEDIA QUERY (xl) ------------------*/
 @media screen and (min-width: 1440px) {
 
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .heading {
+        grid-column: 1;
+    }
+
+    header nav {
+        grid-column: 2;
+    }
+
+    nav a {
+        display: inline-block;
+        float: right;
+        width: 200px;
+        margin: 10px;
+        padding: 15px 25px;
+        border: 2px solid #ffffff;
+        border-radius: 5px;
+        background-color: #E75D02;
+        border-radius: 5px;
+    }
+
     .fruitList {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -283,7 +372,7 @@ small {
         padding-left: 10px;
     }
 
-    ul {
+    li {
         display: inline;
     }
 
@@ -293,6 +382,7 @@ small {
 
     main p {
         padding-left: 15px;
+        padding-right: 15px;
     }
 
     footer {
